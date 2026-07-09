@@ -106,15 +106,15 @@ export default function Contact() {
                 </div>
                 <div className="col-md-6">
                   <label htmlFor="email">Emailingiz</label>
-                  <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} required placeholder='Emailni kiriting' />
+                  <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} required placeholder='Emailni kiriting.' />
                 </div>
                 <div className="col-md-12">
                   <label htmlFor="subject">Mavzu</label>
-                  <input type="text" name="subject" id="subject" value={formData.subject} onChange={handleChange} required placeholder='Mavzu ni kiriting' />
+                  <input type="text" name="subject" id="subject" value={formData.subject} onChange={handleChange} required placeholder='Mavzuni kiriting' />
                 </div>
                 <div className="col-md-12">
                   <label htmlFor="message">Xabar</label>
-                  <textarea name="message" id="message" rows="10" value={formData.message} onChange={handleChange} required placeholder='Xabarni kiriting'></textarea>
+                  <textarea name="message" id="message" rows="10" value={formData.message} onChange={handleChange} required placeholder='Xabarni kiriting. Javob esa sizning emailingizga boradi'></textarea>
                 </div>
                 <div className="col-md-12 text-center">
                   {loading && <div className="form-loading">Yuborilmoqda...</div>}
