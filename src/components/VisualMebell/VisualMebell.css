@@ -1,0 +1,176 @@
+.visual-mebell-page {
+  padding: 40px 20px 60px;
+  max-width: 1100px;
+}
+
+.vm-page-title {
+  margin-bottom: 30px;
+}
+
+.vm-page-title h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.vm-page-title p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.vm-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.vm-card-left {
+  flex: 1;
+  background: #f5f0eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  min-height: 400px;
+}
+
+.vm-card-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.vm-card-right {
+  flex: 1;
+  padding: 40px 36px;
+  overflow-y: auto;
+}
+
+.vm-number {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #8b6914;
+}
+
+.vm-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 8px 0 12px;
+  line-height: 1.3;
+}
+
+.vm-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.vm-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.vm-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #f9f7f4;
+  border-radius: 10px;
+}
+
+.vm-meta-item i {
+  font-size: 20px;
+  color: #8b6914;
+  width: 24px;
+  text-align: center;
+}
+
+.vm-meta-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.vm-meta-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999;
+}
+
+.vm-meta-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.vm-purpose {
+  margin-bottom: 28px;
+}
+
+.vm-purpose h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.vm-purpose p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555;
+  margin: 0;
+}
+
+.vm-visit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: #8b6914;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.vm-visit:hover {
+  background: #a37d1a;
+  transform: translateY(-1px);
+}
+
+.vm-visit i {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .vm-card {
+    flex-direction: column;
+  }
+
+  .vm-card-left {
+    min-height: 250px;
+    padding: 20px;
+  }
+
+  .vm-card-right {
+    padding: 28px 20px;
+  }
+
+  .vm-title {
+    font-size: 22px;
+  }
+}

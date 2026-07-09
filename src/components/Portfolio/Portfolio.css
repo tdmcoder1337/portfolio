@@ -1,0 +1,159 @@
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio-card-link {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+
+.portfolio-card {
+  background: var(--surface-color);
+  border-radius: 12px;
+  padding: 28px 30px;
+  height: 100%;
+  min-height: 200px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.portfolio-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+  border-color: var(--accent-color);
+}
+
+.portfolio-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.portfolio-card-number {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent-color);
+}
+
+.portfolio-card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  font-size: 18px;
+  transition: 0.25s;
+}
+
+.portfolio-card:hover .portfolio-card-icon {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.portfolio-card-body h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.portfolio-card-body p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 0;
+}
+
+.portfolio-card-footer {
+  margin-top: auto;
+  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.35);
+  transition: color 0.25s;
+}
+
+.portfolio-card:hover .portfolio-card-footer {
+  color: var(--accent-color);
+}
+
+.portfolio-card-footer i {
+  font-size: 16px;
+  transition: transform 0.25s;
+}
+
+.portfolio-card:hover .portfolio-card-footer i {
+  transform: translateX(4px);
+}
+
+.portfolio-card--horizontal {
+  flex-direction: row;
+  padding: 0;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.portfolio-card-img {
+  width: 240px;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  background: #1a1f2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  padding: 12px;
+}
+
+.portfolio-card-content {
+  flex: 1;
+  padding: 28px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 575px) {
+  .portfolio-card {
+    padding: 22px 20px;
+  }
+
+  .portfolio-card--horizontal {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .portfolio-card-img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .portfolio-card-content {
+    padding: 22px 20px;
+  }
+}

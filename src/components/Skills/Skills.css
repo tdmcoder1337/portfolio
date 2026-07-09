@@ -1,0 +1,51 @@
+.skill-item {
+  height: 60px;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.skill-name {
+  color: var(--heading-color);
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: var(--heading-font);
+  font-size: 13px;
+}
+
+.skill-val {
+  float: right;
+  font-style: normal;
+  font-size: 13px;
+}
+
+.progress-bar-wrap {
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  height: 10px;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 10px;
+  background-color: var(--accent-color);
+  transition: width 0.9s ease-in-out;
+  border-radius: 0;
+}
+
+.skills-category {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-top: 16px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.skills-category--back,
+.skills-category--other {
+  margin-top: 40px;
+}
