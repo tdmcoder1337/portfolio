@@ -49,27 +49,33 @@ export default function Hero() {
           <span className="hero-greeting">SALOM, MEN</span>
           <h1 className="hero-title">
             Sodiqov<br />
-            Muhammadsodiq
+            <span className="hero-name-line">
+              Muhammadsodiq
+              <svg className="hero-underline" viewBox="0 0 200 20" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 12 Q 90 4, 160 8 Q 182 10, 194 1" />
+              </svg>
+            </span>
           </h1>
 
-          <div className="hero-underline"></div>
-
           <p className="hero-subtitle">
-            <span className="hero-quote">&ldquo;</span>
-            Men <span ref={textRef} className="hero-typed-text">Dasturchi</span>
-            <span className="typed-cursor">|</span>
-            <span className="hero-quote">&rdquo;</span>
+            <span className="hero-quote"></span>
+            Men <span className="hero-typed-wrap">
+              <span ref={textRef} className="hero-typed-text">Dasturchi</span>
+              <span className="typed-cursor">|</span>
+            </span>
+            <span className="hero-quote"></span>
           </p>
 
           <p className="hero-quote-section">
-            <span className="hero-big-quote">&ldquo;</span>
-            Gapirishga kelganda hamma senior. Amalda-chi?
-            <span className="hero-big-quote">&rdquo;</span>
+            <span className="hero-big-quote hero-quote-open">&ldquo;</span>
+            <span className='motiv'>Gapirishga kelganda <br /> hamma senior.  Amalda-chi ?</span>
+            <span className="hero-big-quote hero-quote-close">&rdquo;</span>
           </p>
 
           <div className="hero-buttons">
-            <a href="#contact" className="btn-primary">Aloqaga chiqish</a>
-            <a href="#portfolio" className="btn-secondary">Loyihalarim</a>
+             <a href="#portfolio" className="btn-primary">Loyihalarim</a>
+            <a href="#contact" className="btn-secondary">Aloqaga chiqish</a>
+           
           </div>
         </div>
 
