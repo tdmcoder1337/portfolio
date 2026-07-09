@@ -323,6 +323,10 @@
     min-height: 100vh;
   }
 
+  .hero-bg {
+    background-image: url('/assets/img/hero-bg-wood.jpg');
+  }
+
   .hero-container {
     flex-direction: column;
     padding: 100px 24px 40px;
