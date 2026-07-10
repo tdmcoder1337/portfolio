@@ -39,4 +39,14 @@ export const projects = [
     purpose: 'TDM Coder Dashboard — bu ma\'lumotlarni boshqarish va tahlil qilish uchun yaratilgan kuchli admin panel. Loyiha orqali siz real vaqt rejimida ma\'lumotlarni kuzatishingiz, hisobotlarni yaratishingiz va tizim faoliyatini nazorat qilishingiz mumkin. Dashboard foydalanuvchilarga murakkab ma\'lumotlarni sodda va tushunarli tarzda taqdim etadi.',
     tech: 'React, Recharts, Material-UI',
   },
+  {
+    id: 5,
+    title: 'UZ Fight Talks',
+    desc: 'O\'zbekistondagi jang san\'ati sportchilarini birlashtiruvchi platforma',
+    category: 'app',
+    url: 'https://tdmcoder-boxing.vercel.app/',
+    image: '/assets/img/portfolio/tdm-boxing-info.jpg',
+    purpose: 'UZ Fight Talks — bokschilar, MMA, kurash va taekvondo sportchilarini bir platformada birlashtiruvchi loyiha. Foydalanuvchilar suhbatlashishi, jangga taklif qilishi, uchrashuvlarni band qilishi va janglarni tashkil etishi mumkin. Loyiha O\'zbekistondagi eng zo\'r jangchilarni bir joyga to\'plashni maqsad qilgan.',
+    tech: 'React, Node.js, Tailwind CSS',
+  },
 ];
