@@ -3,21 +3,21 @@ import './Rezyume.css';
 const summary = {
   title: 'Sodiqov Muhammadsodiq',
   subtitle: "Men hozirgi kunda o'sib kelayotgan va yangi bo'lgan texnalogiyalarni o'rganishda davom etayotgan Full Stack dasturchiman. Men o'z ishlarimni mukammal bajarishga intilaman va har doim yangi narsalarni o'rganishga tayyorman.",
-  details: ["Toshkent, O'zbekiston", '+998 90 123 45 67', 'info@example.com'],
+  details: ["Toshkent, O'zbekiston", '+998 99 315 4322', 'shokirovich.uz'],
 };
 
 const education = [
   {
     title: 'Front End',
     year: '2023 - 2026',
-    school: 'Information Technology Park, Toshkent, O\'zbekiston.',
-    desc: 'Men bu yo\nalishda o\'z bilimlarimni oshirish va amaliy tajriba orttirish uchun turli kurslarda qatnashdim. Bu kurslar orqali men zamonaviy web texnologiyalari, JavaScript, React va boshqa front-end texnologiyalarini chuqur o\'rganish imkoniyatiga ega bo\'ldim.',
+    school: '"Information Technology Park, Toshkent, O\'zbekiston" da o\'qiganman.',
+    desc: 'Men bu yo\'nalishda o\'z bilimlarimni oshirish va amaliy tajriba orttirish uchun turli kurslarda qatnashdim. Bu kurslar orqali men zamonaviy web texnologiyalari, JavaScript, React va boshqa front-end texnologiyalarini chuqur o\'rganish imkoniyatiga ega bo\'ldim.',
   },
   {
     title: 'Back End',
-    year: '2010 - 2014',
-    school: 'Information Technology Park, Toshkent, O\'zbekiston.',
-    desc: 'Mening asosiy yo\'nalishim backend bo\'lib, men server tomonida ishlash, ma\'lumotlar bazasi bilan ishlash va API larni yaratish bo\'yicha chuqur bilimga egaman. Bu yonalishda men Node.js, Express.js va boshqa backend texnologiyalarini o\'rganib, amaliy tajriba orttirdim.',
+    year: '2024 - 2026 ',
+    school: '"Information Technology Park, Toshkent, O\'zbekiston."da o\'qiganman.',
+    desc: 'Mening asosiy yo\'nalishim backend bo\'lib, men server tomonida ishlash, ma\'lumotlar bazasi bilan ishlash va API larni yaratish bo\'yicha chuqur bilimga egaman. Bu yo\'nalishda men Node.js, Express.js va boshqa backend texnologiyalarini o\'rganib, amaliy tajriba orttirdim.',
   },
 ];
 

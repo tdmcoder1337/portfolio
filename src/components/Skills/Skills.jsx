@@ -27,7 +27,8 @@ const otherSkills = [
   { name: 'MONGODB ATLAS', value: 80 },
   { name: 'VERCEL', value: 85 },
   { name: 'NETLIFY', value: 80 },
-  { name: 'NPM', value: 85 },
+  { name: 'NPM', value: 90 },
+  {name: 'Technical SEO', value: 75},
 ];
 
 function SkillBar({ name, value }) {
@@ -106,7 +107,7 @@ export default function Skills() {
           </div>
         </div>
 
-        <h3 className="skills-category skills-category--other">Qo'shimcha bunitexnologiyalar</h3>
+        <h3 className="skills-category skills-category--other">Qo'shimcha texnologiyalar</h3>
         <div className="row">
           <div className="col-lg-6">
             {otherLeft.map((skill) => (
