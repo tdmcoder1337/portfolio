@@ -74,7 +74,7 @@ export default function Contact() {
                 <i className="bi bi-telephone"></i>
                 <div>
                   <h3>Qo'ng'iroq</h3>
-                  <p>+998 99 315 4322</p>
+                  <p>+998 99 315 43 22</p>
                 </div>
               </div>
 

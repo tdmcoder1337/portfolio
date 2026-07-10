@@ -3,7 +3,7 @@ import './Rezyume.css';
 const summary = {
   title: 'Sodiqov Muhammadsodiq',
   subtitle: "Men hozirgi kunda o'sib kelayotgan va yangi bo'lgan texnalogiyalarni o'rganishda davom etayotgan Full Stack dasturchiman. Men o'z ishlarimni mukammal bajarishga intilaman va har doim yangi narsalarni o'rganishga tayyorman.",
-  details: ["Toshkent, O'zbekiston", '+998 99 315 4322', 'shokirovich.uz'],
+  details: ["Toshkent, O'zbekiston", '+998 99 315 43 22', 'shokirovich.uz'],
 };
 
 const education = [
