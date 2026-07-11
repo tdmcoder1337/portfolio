@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { useLanguage } from '../../i18n/LanguageContext';
 import './Skills.css';
 
 const frontendSkills = [
@@ -59,6 +60,7 @@ function SkillBar({ name, value }) {
 }
 
 export default function Skills() {
+  const { t } = useLanguage();
   const halfFront = Math.ceil(frontendSkills.length / 2);
   const frontLeft = frontendSkills.slice(0, halfFront);
   const frontRight = frontendSkills.slice(halfFront);
@@ -74,12 +76,12 @@ export default function Skills() {
   return (
     <section id="skills" className="skills section light-background">
       <div className="container section-title">
-        <h2>Ko'nikmalar</h2>
-        <p>Men quyidagi texnologiyalar va vositalar bilan ishlayman. Har bir sohada chuqur bilim va tajribaga egaman.</p>
+        <h2>{t('skills.heading')}</h2>
+        <p>{t('skills.intro')}</p>
       </div>
 
       <div className="container">
-        <h3 className="skills-category">Front End</h3>
+        <h3 className="skills-category">{t('skills.categoryFront')}</h3>
         <div className="row">
           <div className="col-lg-6">
             {frontLeft.map((skill) => (
@@ -93,7 +95,7 @@ export default function Skills() {
           </div>
         </div>
 
-        <h3 className="skills-category skills-category--back">Backend</h3>
+        <h3 className="skills-category skills-category--back">{t('skills.categoryBack')}</h3>
         <div className="row">
           <div className="col-lg-6">
             {backLeft.map((skill) => (
@@ -107,7 +109,7 @@ export default function Skills() {
           </div>
         </div>
 
-        <h3 className="skills-category skills-category--other">Qo'shimcha texnologiyalar</h3>
+        <h3 className="skills-category skills-category--other">{t('skills.categoryOther')}</h3>
         <div className="row">
           <div className="col-lg-6">
             {otherLeft.map((skill) => (

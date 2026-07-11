@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom';
 import { projects } from '../../data/projects';
+import { useLanguage } from '../../i18n/LanguageContext';
 import './Portfolio.css';
 
 export default function Portfolio() {
+  const { t, lang } = useLanguage();
+
   return (
     <section id="portfolio" className="portfolio section light-background">
       <div className="container section-title">
-        <h2>Portfolio</h2>
-        <p>Bajarilgan loyihalarim bilan tanishing. Har bir loyiha mijoz talablariga mos ravishda, sifat va estetikaga qat'iy rioya qilgan holda amalga oshirilgan.</p>
+        <h2>{t('portfolio.heading')}</h2>
+        <p>{t('portfolio.intro')}</p>
       </div>
 
       <div className="container">
@@ -21,7 +24,7 @@ export default function Portfolio() {
                 <div className={`portfolio-card ${item.image ? 'portfolio-card--horizontal' : ''}`}>
                   {item.image && (
                     <div className="portfolio-card-img">
-                      <img src={item.image} alt={item.title} />
+                      <img src={item.image} alt={item.title[lang]} />
                     </div>
                   )}
                   <div className="portfolio-card-content">
@@ -32,11 +35,11 @@ export default function Portfolio() {
                       </div>
                     </div>
                     <div className="portfolio-card-body">
-                      <h3>{item.title}</h3>
-                      <p>{item.desc}</p>
+                      <h3>{item.title[lang]}</h3>
+                      <p>{item.desc[lang]}</p>
                     </div>
                     <div className="portfolio-card-footer">
-                      Batafsil <i className="bi bi-arrow-right"></i>
+                      {t('portfolio.readMore')} <i className="bi bi-arrow-right"></i>
                     </div>
                   </div>
                 </div>

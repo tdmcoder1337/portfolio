@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useLanguage } from '../../i18n/LanguageContext';
 import './ScrollToTop.css';
 
 export default function ScrollToTop() {
+  const { t } = useLanguage();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -18,7 +20,7 @@ export default function ScrollToTop() {
     <button
       className={`scroll-top-btn ${visible ? 'active' : ''}`}
       onClick={scrollToTop}
-      aria-label="Yuqoriga chiqish"
+      aria-label={t('scrollTop.aria')}
     >
       <i className="bi bi-arrow-up-short"></i>
     </button>

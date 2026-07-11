@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
+import { useLanguage } from '../../i18n/LanguageContext';
 import './Aloqa.css';
 
 export default function Contact() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [status, setStatus] = useState({ type: '', text: '' });
   const [loading, setLoading] = useState(false);
@@ -38,14 +40,14 @@ export default function Contact() {
       const data = await res.json();
 
       if (res.ok) {
-        setStatus({ type: 'success', text: "Xabaringiz yuborildi. Rahmat!" });
+        setStatus({ type: 'success', text: t('contact.successMsg') });
         setFormData({ name: '', email: '', subject: '', message: '' });
         setCountdown(5);
       } else {
-        setStatus({ type: 'error', text: data.error || "Xatolik yuz berdi. Qayta urinib ko'ring." });
+        setStatus({ type: 'error', text: data.error || t('contact.errorGeneric') });
       }
     } catch {
-      setStatus({ type: 'error', text: "Xabarni yuborish imkoni bo'lmadi. Keyinroq qayta urinib ko'ring." });
+      setStatus({ type: 'error', text: t('contact.errorSend') });
     } finally {
       setLoading(false);
     }
@@ -54,8 +56,8 @@ export default function Contact() {
   return (
     <section id="contact" className="contact section">
       <div className="container section-title">
-        <h2>Aloqa</h2>
-        <p>Men bilan bog'lanish uchun quyidagi ma'lumotlardan foydalanishingiz yoki forma orqali xabar yuborishingiz mumkin.</p>
+        <h2>{t('contact.heading')}</h2>
+        <p>{t('contact.intro')}</p>
       </div>
 
       <div className="container">
@@ -65,15 +67,15 @@ export default function Contact() {
               <div className="info-item">
                 <i className="bi bi-geo-alt"></i>
                 <div>
-                  <h3>Manzil</h3>
-                  <p>Toshkent, O'zbekiston</p>
+                  <h3>{t('contact.addressLabel')}</h3>
+                  <p>{t('contact.addressValue')}</p>
                 </div>
               </div>
 
               <div className="info-item">
                 <i className="bi bi-telephone"></i>
                 <div>
-                  <h3>Qo'ng'iroq</h3>
+                  <h3>{t('contact.callLabel')}</h3>
                   <p>+998 99 315 43 22</p>
                 </div>
               </div>
@@ -81,13 +83,13 @@ export default function Contact() {
               <div className="info-item">
                 <i className="bi bi-envelope"></i>
                 <div>
-                  <h3>Email</h3>
+                  <h3>{t('contact.emailLabel')}</h3>
                   <p>muhammadsodiq4322@gmail.com</p>
                 </div>
               </div>
 
               <iframe
-                title="Manzil"
+                title={t('contact.mapTitle')}
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.933465088797!2d69.68152169999999!3d41.2885525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38afab003136579b%3A0x7b0dac3de069196e!2sUy!5e0!3m2!1sru!2s!4v1783589017771!5m2!1sru!2s"
                 className="contact-map"
                 allowFullScreen
@@ -101,26 +103,26 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="contact-form">
               <div className="row">
                 <div className="col-md-6">
-                  <label htmlFor="name">Ismingiz</label>
-                  <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} required placeholder='Ismni kiriting' />
+                  <label htmlFor="name">{t('contact.formName')}</label>
+                  <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} required placeholder={t('contact.formNamePlaceholder')} />
                 </div>
                 <div className="col-md-6">
-                  <label htmlFor="email">Emailingiz</label>
-                  <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} required placeholder='Emailni kiriting.' />
+                  <label htmlFor="email">{t('contact.formEmail')}</label>
+                  <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} required placeholder={t('contact.formEmailPlaceholder')} />
                 </div>
                 <div className="col-md-12">
-                  <label htmlFor="subject">Mavzu</label>
-                  <input type="text" name="subject" id="subject" value={formData.subject} onChange={handleChange} required placeholder='Mavzuni kiriting' />
+                  <label htmlFor="subject">{t('contact.formSubject')}</label>
+                  <input type="text" name="subject" id="subject" value={formData.subject} onChange={handleChange} required placeholder={t('contact.formSubjectPlaceholder')} />
                 </div>
                 <div className="col-md-12">
-                  <label htmlFor="message">Xabar</label>
-                  <textarea name="message" id="message" rows="10" value={formData.message} onChange={handleChange} required placeholder='Xabarni kiriting. Javob esa sizning emailingizga boradi'></textarea>
+                  <label htmlFor="message">{t('contact.formMessage')}</label>
+                  <textarea name="message" id="message" rows="10" value={formData.message} onChange={handleChange} required placeholder={t('contact.formMessagePlaceholder')}></textarea>
                 </div>
                 <div className="col-md-12 text-center">
-                  {loading && <div className="form-loading">Yuborilmoqda...</div>}
+                  {loading && <div className="form-loading">{t('contact.sending')}</div>}
                   {status.type === 'error' && <div className="form-error">{status.text}</div>}
                   {status.type === 'success' && <div className="form-success">{status.text} ({countdown})</div>}
-                  <button type="submit" disabled={loading}>Xabarni yuborish</button>
+                  <button type="submit" disabled={loading}>{t('contact.submit')}</button>
                 </div>
               </div>
             </form>

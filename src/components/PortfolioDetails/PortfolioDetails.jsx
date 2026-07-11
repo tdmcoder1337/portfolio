@@ -1,9 +1,11 @@
 import { useSearchParams, Link } from 'react-router-dom';
 import { projects } from '../../data/projects';
+import { useLanguage } from '../../i18n/LanguageContext';
 import './PortfolioDetails.css';
 
 export default function PortfolioDetails() {
   const [searchParams] = useSearchParams();
+  const { t, lang } = useLanguage();
   const id = parseInt(searchParams.get('id'), 10);
   const project = projects.find((p) => p.id === id);
 
@@ -12,13 +14,13 @@ export default function PortfolioDetails() {
       <div className="page-content">
         <div className="page-title dark-background">
           <div className="container">
-            <h1>Loyiha topilmadi</h1>
+            <h1>{t('portfolioDetails.notFoundTitle')}</h1>
           </div>
         </div>
         <section className="section">
           <div className="container text-center">
-            <p>Bunday loyiha mavjud emas.</p>
-            <Link to="/" className="btn-back">Bosh sahifaga qaytish</Link>
+            <p>{t('portfolioDetails.notFoundText')}</p>
+            <Link to="/" className="btn-back">{t('portfolioDetails.backHome')}</Link>
           </div>
         </section>
       </div>
@@ -29,11 +31,11 @@ export default function PortfolioDetails() {
     <div className="page-content">
       <div className="page-title dark-background">
         <div className="container">
-          <h1>{project.title}</h1>
+          <h1>{project.title[lang]}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Bosh sahifa</Link></li>
-              <li><button type="button" onClick={() => window.history.back()} className="breadcrumb-back">{project.title}</button></li>
+              <li><Link to="/">{t('portfolioDetails.breadcrumbHome')}</Link></li>
+              <li><button type="button" onClick={() => window.history.back()} className="breadcrumb-back">{project.title[lang]}</button></li>
             </ol>
           </nav>
         </div>
@@ -44,24 +46,24 @@ export default function PortfolioDetails() {
           <div className="portfolio-detail-card">
             {project.image && (
               <div className="portfolio-detail-image">
-                <img src={project.image} alt={project.title} />
+                <img src={project.image} alt={project.title[lang]} />
               </div>
             )}
             <div className="portfolio-detail-info">
             <div className="portfolio-detail-header">
               <span className="portfolio-detail-number">0{project.id}</span>
             </div>
-            <h2 className="portfolio-detail-title">{project.title}</h2>
-            <p className="portfolio-detail-purpose">{project.purpose}</p>
+            <h2 className="portfolio-detail-title">{project.title[lang]}</h2>
+            <p className="portfolio-detail-purpose">{project.purpose[lang]}</p>
 
             <div className="portfolio-detail-meta">
               <div className="meta-item">
-                <strong>Texnologiyalar</strong>
+                <strong>{t('portfolioDetails.techLabel')}</strong>
                 <span>{project.tech}</span>
               </div>
               <div className="meta-item">
-                <strong>Turkum</strong>
-                <span>Veb ilova</span>
+                <strong>{t('portfolioDetails.categoryLabel')}</strong>
+                <span>{t('portfolioDetails.categoryValue')}</span>
               </div>
             </div>
 
@@ -71,7 +73,7 @@ export default function PortfolioDetails() {
               rel="noopener noreferrer"
               className="btn-visit"
             >
-              Loyihaga o&apos;tish
+              {t('portfolioDetails.visitButton')}
               <i className="bi bi-box-arrow-up-right"></i>
             </a>
             </div>

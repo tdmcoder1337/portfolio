@@ -1,14 +1,16 @@
 import { projects } from '../../data/projects';
+import { useLanguage } from '../../i18n/LanguageContext';
 import './TdmDashboard.css';
 
 export default function TdmDashboard() {
+  const { t, lang } = useLanguage();
   const project = projects.find((p) => p.id === 4);
 
   return (
     <section className="tdm-dashboard-page">
       <div className="tdm-page-title">
-        <h2>{project.title}</h2>
-        <p>Bajarilgan loyihalarim bilan tanishing.</p>
+        <h2>{project.title[lang]}</h2>
+        <p>{t('projectPage.subtitle')}</p>
       </div>
 
       <div className="tdm-card">
@@ -20,29 +22,29 @@ export default function TdmDashboard() {
         </div>
         <div className="tdm-card-right">
           <span className="tdm-number">0{project.id}</span>
-          <h3 className="tdm-title">{project.title}</h3>
-          <p className="tdm-desc">{project.desc}</p>
+          <h3 className="tdm-title">{project.title[lang]}</h3>
+          <p className="tdm-desc">{project.desc[lang]}</p>
 
           <div className="tdm-meta">
             <div className="tdm-meta-item">
               <i className="bi bi-tags"></i>
               <div>
-                <span className="tdm-meta-label">Texnologiyalar</span>
+                <span className="tdm-meta-label">{t('projectPage.techLabel')}</span>
                 <span className="tdm-meta-value">{project.tech}</span>
               </div>
             </div>
             <div className="tdm-meta-item">
               <i className="bi bi-folder2"></i>
               <div>
-                <span className="tdm-meta-label">Turkum</span>
-                <span className="tdm-meta-value">Veb ilova</span>
+                <span className="tdm-meta-label">{t('projectPage.categoryLabel')}</span>
+                <span className="tdm-meta-value">{t('projectPage.categoryValue')}</span>
               </div>
             </div>
           </div>
 
           <div className="tdm-purpose">
-            <h4>Loyiha haqida</h4>
-            <p>{project.purpose}</p>
+            <h4>{t('projectPage.aboutHeading')}</h4>
+            <p>{project.purpose[lang]}</p>
           </div>
 
           <a
@@ -51,7 +53,7 @@ export default function TdmDashboard() {
             rel="noopener noreferrer"
             className="tdm-visit"
           >
-            Loyihaga o'tish <i className="bi bi-box-arrow-up-right"></i>
+            {t('projectPage.visitButton')} <i className="bi bi-box-arrow-up-right"></i>
           </a>
         </div>
       </div>

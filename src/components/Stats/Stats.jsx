@@ -1,12 +1,9 @@
 import './Stats.css';
 import { useEffect, useState, useRef } from 'react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
-const statsData = [
-  { icon: 'bi-emoji-smile', value: 232, label: 'Mamnun mijozlar', desc: 'doimiy hamkorlik' },
-  { icon: 'bi-journal-richtext', value: 521, label: 'Loyihalar', desc: 'yakunlangan ishlar' },
-  { icon: 'bi-headset', value: 1453, label: "Qo'llab-quvvatlash", desc: 'kecha-yu kunduz' },
-  { icon: 'bi-people', value: 32, label: 'Jamoa a\'zolari', desc: 'tajribali mutaxassislar' },
-];
+const icons = ['bi-emoji-smile', 'bi-journal-richtext', 'bi-headset', 'bi-people'];
+const values = [232, 521, 1453, 32];
 
 function Counter({ end, duration = 2000 }) {
   const [count, setCount] = useState(0);
@@ -45,15 +42,18 @@ function Counter({ end, duration = 2000 }) {
 }
 
 export default function Stats() {
+  const { t } = useLanguage();
+  const items = t('stats.items');
+
   return (
     <section id="stats" className="stats section">
       <div className="container">
         <div className="row">
-          {statsData.map((stat) => (
+          {items.map((stat, i) => (
             <div key={stat.label} className="col-lg-3 col-md-6">
               <div className="stats-item">
-                <i className={`bi ${stat.icon}`}></i>
-                <Counter end={stat.value} />
+                <i className={`bi ${icons[i]}`}></i>
+                <Counter end={values[i]} />
                 <p><strong>{stat.label}</strong> <span>{stat.desc}</span></p>
               </div>
             </div>

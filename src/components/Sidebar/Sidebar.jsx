@@ -1,20 +1,29 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useLanguage } from '../../i18n/LanguageContext';
 import './Sidebar.css';
 
-const navLinks = [
-  { href: '/', icon: 'bi-house', label: 'Bosh sahifa' },
-  { href: '/#about', icon: 'bi-person', label: 'Men haqimda' },
-  { href: '/#resume', icon: 'bi-file-earmark-text', label: 'Rezyume' },
-  { href: '/#portfolio', icon: 'bi-images', label: 'Portfolio' },
-  { href: '/#services', icon: 'bi-hdd-stack', label: 'Xizmatlar' },
-  { href: '/#contact', icon: 'bi-envelope', label: 'Aloqa' },
+const languages = [
+  { code: 'uz', label: "O'zbekcha", short: 'UZ' },
+  { code: 'en', label: 'English', short: 'EN' },
 ];
 
 export default function Sidebar() {
   const [show, setShow] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const [langOpen, setLangOpen] = useState(false);
   const location = useLocation();
+  const { lang, setLang, t } = useLanguage();
+  const langRef = useRef(null);
+
+  const navLinks = [
+    { href: '/', icon: 'bi-house', label: t('sidebar.nav.home') },
+    { href: '/#about', icon: 'bi-person', label: t('sidebar.nav.about') },
+    { href: '/#resume', icon: 'bi-file-earmark-text', label: t('sidebar.nav.resume') },
+    { href: '/#portfolio', icon: 'bi-images', label: t('sidebar.nav.portfolio') },
+    { href: '/#services', icon: 'bi-hdd-stack', label: t('sidebar.nav.services') },
+    { href: '/#contact', icon: 'bi-envelope', label: t('sidebar.nav.contact') },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +40,16 @@ export default function Sidebar() {
     window.addEventListener('scroll', handleScroll);
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (langRef.current && !langRef.current.contains(e.target)) {
+        setLangOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   const handleNavClick = (e, href) => {
@@ -51,12 +70,14 @@ export default function Sidebar() {
     return false;
   };
 
+  const currentLang = languages.find((l) => l.code === lang) ?? languages[0];
+
   return (
     <>
       <button
         className={`sidebar-toggle ${show ? 'open' : ''}`}
         onClick={() => setShow(!show)}
-        aria-label="Navigatsiyani ochish/yopish"
+        aria-label={t('sidebar.toggleAria')}
       >
         <i className={`bi ${show ? 'bi-x' : 'bi-list'}`}></i>
       </button>
@@ -65,21 +86,53 @@ export default function Sidebar() {
         <div className="sidebar-inner">
           <div className="sidebar-profile">
             <div className="sidebar-profile-img">
-              <img src="/assets/img/my-profile.png" alt="Profil" />
+              <img src="/assets/img/my-profile.png" alt={t('about.imgAlt')} />
             </div>
           </div>
 
           <h2 className="sidebar-name">Sodiqov<br />Muhammadsodiq</h2>
-          <span className="sidebar-role">Dasturchi</span>
+          <span className="sidebar-role">{t('sidebar.role')}</span>
           <div className="sidebar-social">
             <a href="#" className="social-link"><i className="bi bi-instagram"></i></a>
             <a href="https://t.me/tdmcoder" className="social-link"><i className="bi bi-telegram"></i></a>
             <a href="https://github.com/tdmcoder1337" className="social-link"><i className="bi bi-github"></i></a>
           </div>
 
+          <div className="sidebar-lang" ref={langRef}>
+            <button
+              type="button"
+              className="sidebar-lang-toggle"
+              onClick={() => setLangOpen((v) => !v)}
+              aria-haspopup="listbox"
+              aria-expanded={langOpen}
+            >
+              <i className="bi bi-globe2"></i>
+              <span>{currentLang.short}</span>
+              <i className={`bi bi-chevron-down sidebar-lang-caret ${langOpen ? 'open' : ''}`}></i>
+            </button>
+            {langOpen && (
+              <ul className="sidebar-lang-menu" role="listbox">
+                {languages.map((l) => (
+                  <li key={l.code}>
+                    <button
+                      type="button"
+                      role="option"
+                      aria-selected={l.code === lang}
+                      className={l.code === lang ? 'active' : ''}
+                      onClick={() => {
+                        setLang(l.code);
+                        setLangOpen(false);
+                      }}
+                    >
+                      {l.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
           <div className="sidebar-divider"></div>
-
-
 
           <nav className="sidebar-nav">
             <ul>
@@ -100,7 +153,7 @@ export default function Sidebar() {
 
           <a href="/rezyume.html" download className="sidebar-cv-btn">
             <i className="bi bi-download"></i>
-            Yuklab olish CV
+            {t('sidebar.cvButton')}
           </a>
         </div>
       </aside>

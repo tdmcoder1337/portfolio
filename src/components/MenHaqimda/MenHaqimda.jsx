@@ -1,40 +1,43 @@
+import { useLanguage } from '../../i18n/LanguageContext';
 import './MenHaqimda.css';
 
 export default function About() {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="about section">
       <div className="container section-title">
-        <h2>Men haqimda</h2>
-        <p>Men veb dasturlash  sohasida tajribali mutaxassisman. Mijozlarimning ehtiyojlarini tushunib, ularga eng yaxshi yechimlarni taklif qilaman. Har bir loyihaga ijodiy yondashib, sifatli va zamonaviy mahsulot yaratishga intilaman.</p>
+        <h2>{t('about.heading')}</h2>
+        <p>{t('about.intro')}</p>
       </div>
 
       <div className="container">
         <div className="row about-row">
           <div className="col-lg-4">
-            <img src="/assets/img/my-profile.jpg" alt="Profil" className="about-img" />
+            <img src="/assets/img/my-profile.jpg" alt={t('about.imgAlt')} className="about-img" />
           </div>
           <div className="col-lg-8 about-content">
-            <h2>UI/UX Dizayner va Veb Dasturchi.</h2>
-            <p className="about-subtitle">Men foydalanuvchilarga qulay va zamonaviy veb-saytlar hamda ilovalar yaratishga ixtisoslashganman. Har bir loyihada mijoz talablariga mos, sifatli mahsulot taqdim etaman.</p>
+            <h2>{t('about.subheading')}</h2>
+            <p className="about-subtitle">{t('about.subtitle')}</p>
             <div className="row">
               <div className="col-lg-6">
                 <ul>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Tug'ilgan kun:</strong> <span>27 Aprel 2003</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Veb-sayt:</strong> <span>www.example.com</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Telefon:</strong> <span>+999 99 315 4322</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Shahar:</strong> <span>Toshkent, O'zbekiston</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>{t('about.birthdayLabel')}</strong> <span>{t('about.birthdayValue')}</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>{t('about.websiteLabel')}</strong> <span><a href="https://shokirovich.uz" target="_blank" rel="noopener noreferrer">shokirovich.uz</a></span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>{t('about.phoneLabel')}</strong> <span>+999 99 315 43 22</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>{t('about.cityLabel')}</strong> <span>{t('about.cityValue')}</span></li>
                 </ul>
               </div>
               <div className="col-lg-6">
                 <ul>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Yosh:</strong> <span>23</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Daraja:</strong> <span>Middle</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Email:</strong> <span>muhammadsodiq4322@gmail.com</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Freelans:</strong> <span>TRINOVA</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>{t('about.ageLabel')}</strong> <span>{t('about.ageValue')}</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>{t('about.levelLabel')}</strong> <span>{t('about.levelValue')}</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>{t('about.emailLabel')}</strong> <span>muhammadsodiq4322@gmail.com</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>{t('about.freelanceLabel')}</strong> <span>TRINOVA</span></li>
                 </ul>
               </div>
             </div>
-            <p>Men veb dasturlash brending sohalarida keng ko'lamli xizmatlarni taklif qilaman. Mijozlarim bilan yaqin hamkorlikda ishlab, ularning maqsadlariga erishish uchun eng yaxshi yechimlarni topaman. Har bir loyiha uchun individual yondashuv va yuqori sifat kafolatlanadi.</p>
+            <p>{t('about.closing')}</p>
           </div>
         </div>
       </div>
