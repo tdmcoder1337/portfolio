@@ -65,7 +65,7 @@ export const projects = [
   },
   {
     id: 5,
-    title: { uz: 'UZ Fight Talks', en: 'UZ Fight Talks' },
+    title: { uz: 'Boxing', en: 'Boxing' },
     desc: {
       uz: 'O\'zbekistondagi jang san\'ati sportchilarini birlashtiruvchi platforma',
       en: 'A platform bringing together combat-sport athletes across Uzbekistan',

@@ -5,31 +5,31 @@ import './Skills.css';
 const frontendSkills = [
   { name: 'HTML', value: 100 },
   { name: 'CSS', value: 95 },
-  { name: 'JavaScript', value: 85 },
-  { name: 'TYPESCRIPT', value: 80 },
-  { name: 'BOOTSTRAP', value: 90 },
-  { name: 'SASS', value: 90 },
-  { name: 'TAILWIND CSS', value: 80 },
-  { name: 'REACT/VITE', value: 85 },
+  { name: 'JavaScript', value: 95 },
+  { name: 'TYPESCRIPT', value: 90 },
+  { name: 'BOOTSTRAP', value: 95 },
+  { name: 'SASS', value: 95 },
+  { name: 'TAILWIND CSS', value: 88 },
+  { name: 'REACT/VITE', value: 95 },
 ];
 
 const backendSkills = [
-  { name: 'NODE JS', value: 85 },
-  { name: 'EXPRESS JS', value: 85 },
+  { name: 'NODE JS', value: 90},
+  { name: 'EXPRESS JS', value: 90},
   { name: 'MYSQL', value: 90 },
-  { name: 'MONGODB', value: 85 },
-  { name: 'PUG', value: 85 },
+  { name: 'MONGODB', value: 95 },
+  { name: 'PUG', value: 90},
 ];
 
 const otherSkills = [
-  { name: 'GIT', value: 85 },
-  { name: 'GITHUB', value: 85 },
-  { name: 'POSTMAN', value: 80 },
-  { name: 'MONGODB ATLAS', value: 80 },
-  { name: 'VERCEL', value: 85 },
-  { name: 'NETLIFY', value: 80 },
+  { name: 'GIT', value: 95 },
+  { name: 'GITHUB', value: 90 },
+  { name: 'POSTMAN', value: 97 },
+  { name: 'MONGODB ATLAS', value: 95 },
+  { name: 'VERCEL', value: 90 },
+  { name: 'NETLIFY', value: 90},
   { name: 'NPM', value: 90 },
-  {name: 'Technical SEO', value: 75},
+  {name: 'Technical SEO', value: 85},
 ];
 
 function SkillBar({ name, value }) {

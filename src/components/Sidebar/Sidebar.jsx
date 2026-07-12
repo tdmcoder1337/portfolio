@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../../i18n/LanguageContext';
+import { useTheme } from '../../theme/ThemeContext';
 import './Sidebar.css';
 
 const languages = [
@@ -14,6 +15,7 @@ export default function Sidebar() {
   const [langOpen, setLangOpen] = useState(false);
   const location = useLocation();
   const { lang, setLang, t } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
   const langRef = useRef(null);
 
   const navLinks = [
@@ -98,38 +100,50 @@ export default function Sidebar() {
             <a href="https://github.com/tdmcoder1337" className="social-link"><i className="bi bi-github"></i></a>
           </div>
 
-          <div className="sidebar-lang" ref={langRef}>
+          <div className="sidebar-controls">
+            <div className="sidebar-lang" ref={langRef}>
+              <button
+                type="button"
+                className="sidebar-lang-toggle"
+                onClick={() => setLangOpen((v) => !v)}
+                aria-haspopup="listbox"
+                aria-expanded={langOpen}
+              >
+                <i className="bi bi-globe2"></i>
+                <span>{currentLang.short}</span>
+                <i className={`bi bi-chevron-down sidebar-lang-caret ${langOpen ? 'open' : ''}`}></i>
+              </button>
+              {langOpen && (
+                <ul className="sidebar-lang-menu" role="listbox">
+                  {languages.map((l) => (
+                    <li key={l.code}>
+                      <button
+                        type="button"
+                        role="option"
+                        aria-selected={l.code === lang}
+                        className={l.code === lang ? 'active' : ''}
+                        onClick={() => {
+                          setLang(l.code);
+                          setLangOpen(false);
+                        }}
+                      >
+                        {l.label}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+
             <button
               type="button"
-              className="sidebar-lang-toggle"
-              onClick={() => setLangOpen((v) => !v)}
-              aria-haspopup="listbox"
-              aria-expanded={langOpen}
+              className="sidebar-theme-toggle"
+              onClick={toggleTheme}
+              aria-label={t('sidebar.themeToggleAria')}
+              aria-pressed={theme === 'light'}
             >
-              <i className="bi bi-globe2"></i>
-              <span>{currentLang.short}</span>
-              <i className={`bi bi-chevron-down sidebar-lang-caret ${langOpen ? 'open' : ''}`}></i>
+              <i className={`bi ${theme === 'dark' ? 'bi-moon-stars' : 'bi-sun'}`}></i>
             </button>
-            {langOpen && (
-              <ul className="sidebar-lang-menu" role="listbox">
-                {languages.map((l) => (
-                  <li key={l.code}>
-                    <button
-                      type="button"
-                      role="option"
-                      aria-selected={l.code === lang}
-                      className={l.code === lang ? 'active' : ''}
-                      onClick={() => {
-                        setLang(l.code);
-                        setLangOpen(false);
-                      }}
-                    >
-                      {l.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            )}
           </div>
 
           <div className="sidebar-divider"></div>

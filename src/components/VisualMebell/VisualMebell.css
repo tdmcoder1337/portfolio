@@ -10,13 +10,13 @@
 .vm-page-title h2 {
   font-size: 28px;
   font-weight: 700;
-  color: #fff;
+  color: var(--heading-color);
   margin-bottom: 8px;
 }
 
 .vm-page-title p {
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.5);
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
   margin: 0;
 }
 

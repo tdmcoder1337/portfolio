@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  height: 840px;
+  height: 845px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -119,6 +119,7 @@
   white-space: nowrap;
   overflow: hidden;
   vertical-align: bottom;
+  text-align: left;
 }
 
 .hero-typed-text {

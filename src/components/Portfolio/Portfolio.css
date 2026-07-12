@@ -7,6 +7,11 @@
   margin-bottom: 30px;
 }
 
+.portfolio-item:last-child:nth-child(odd) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .portfolio-card-link {
   text-decoration: none;
   display: block;
@@ -24,7 +29,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 94%);
 }
 
 .portfolio-card:hover {
@@ -62,13 +67,13 @@
 
 .portfolio-card:hover .portfolio-card-icon {
   background: var(--accent-color);
-  color: #fff;
+  color: var(--contrast-color);
 }
 
 .portfolio-card-body h3 {
   font-size: 18px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--heading-color);
   margin-bottom: 8px;
   line-height: 1.4;
 }
@@ -76,7 +81,7 @@
 .portfolio-card-body p {
   font-size: 14px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.55);
+  color: color-mix(in srgb, var(--default-color), transparent 45%);
   margin-bottom: 0;
 }
 
@@ -88,7 +93,7 @@
   gap: 6px;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.35);
+  color: color-mix(in srgb, var(--default-color), transparent 65%);
   transition: color 0.25s;
 }
 
@@ -117,7 +122,7 @@
   flex-shrink: 0;
   overflow: hidden;
   position: relative;
-  background: #1a1f2e;
+  background: var(--img-frame-color);
   display: flex;
   align-items: center;
   justify-content: center;

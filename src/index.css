@@ -21,7 +21,28 @@
   --nav-color: #a8a9b4;
   --nav-hover-color: #ffffff;
 
+  --section-alt-color: #040b14;
+  --sidebar-gradient-start: #0F1729;
+  --sidebar-gradient-end: #0B1018;
+  --img-frame-color: #1a1f2e;
+
   scroll-behavior: smooth;
+}
+
+:root[data-theme="light"] {
+  --background-color: #F5F7FA;
+  --default-color: #1F2937;
+  --heading-color: #0F172A;
+  --surface-color: #FFFFFF;
+  --contrast-color: #ffffff;
+
+  --nav-color: #6B7280;
+  --nav-hover-color: #0F172A;
+  --img-frame-color: #EEF1F5;
+
+  --section-alt-color: #EDEFF3;
+  --sidebar-gradient-start: #FFFFFF;
+  --sidebar-gradient-end: #F3F4F6;
 }
 
 html {
@@ -140,11 +161,11 @@ section {
 }
 
 .light-background {
-  background-color: rgba(255, 255, 255, 0.02);
+  background-color: color-mix(in srgb, var(--default-color), transparent 98%);
 }
 
 .dark-background {
-  background-color: #040b14;
+  background-color: var(--section-alt-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
