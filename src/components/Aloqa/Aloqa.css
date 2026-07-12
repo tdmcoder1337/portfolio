@@ -1,8 +1,23 @@
 .contact-grid {
   display: grid;
   grid-template-columns: minmax(0, 460px) 1fr;
+  grid-template-areas:
+    "intro ."
+    "info form";
   gap: 32px;
   align-items: start;
+}
+
+.contact-intro {
+  grid-area: intro;
+}
+
+.contact-info-card {
+  grid-area: info;
+}
+
+.contact-right {
+  grid-area: form;
 }
 
 .contact-badge {
@@ -343,6 +358,10 @@
 @media (max-width: 991px) {
   .contact-grid {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "info"
+      "form";
   }
 }
 

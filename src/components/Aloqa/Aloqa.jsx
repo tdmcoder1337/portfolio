@@ -57,10 +57,10 @@ export default function Contact() {
     <section id="contact" className="contact section">
       <div className="container">
         <div className="contact-grid">
-          <div className="contact-left">
+          <div className="contact-intro">
             <span className="contact-badge">{t('contact.badge')}</span>
             <h2 className="contact-heading">
-              {t('contact.headingLine1')} {t('contact.headingLine2')} <span className="contact-wave">👋</span>
+              {t('contact.headingLine1')} {t('contact.headingLine2')} <span className="contact-wave"></span>
             </h2>
             <p className="contact-lead">{t('contact.intro')}</p>
 
@@ -81,58 +81,58 @@ export default function Contact() {
                 <span>{t('contact.stat3Label')}</span>
               </div>
             </div>
+          </div>
 
-            <div className="contact-info-card">
-              <h3>{t('contact.infoHeading')}</h3>
-              <ul className="contact-info-list">
-                <li>
-                  <span className="contact-info-icon"><i className="bi bi-geo-alt-fill"></i></span>
-                  <div>
-                    <h4>{t('contact.addressLabel')}</h4>
-                    <p>{t('contact.addressValue')}</p>
-                  </div>
-                </li>
-                <li>
-                  <span className="contact-info-icon"><i className="bi bi-telephone-fill"></i></span>
-                  <div>
-                    <h4>{t('contact.callLabel')}</h4>
-                    <p>+998 99 315 43 22</p>
-                  </div>
-                </li>
-                <li>
-                  <span className="contact-info-icon"><i className="bi bi-envelope-fill"></i></span>
-                  <div>
-                    <h4>{t('contact.emailLabel')}</h4>
-                    <p>muhammadsodiq4322@gmail.com</p>
-                  </div>
-                </li>
-                <li>
-                  <span className="contact-info-icon"><i className="bi bi-clock-fill"></i></span>
-                  <div>
-                    <h4>{t('contact.hoursLabel')}</h4>
-                    <p>{t('contact.hoursValueDays')}<br />{t('contact.hoursValueTime')}</p>
-                  </div>
-                </li>
-                <li>
-                  <span className="contact-info-icon"><i className="bi bi-briefcase-fill"></i></span>
-                  <div>
-                    <h4>{t('contact.freelanceLabel')}</h4>
-                    <p>{t('contact.freelanceValue')}</p>
-                  </div>
-                </li>
-              </ul>
+          <div className="contact-info-card">
+            <h3>{t('contact.infoHeading')}</h3>
+            <ul className="contact-info-list">
+              <li>
+                <span className="contact-info-icon"><i className="bi bi-geo-alt-fill"></i></span>
+                <div>
+                  <h4>{t('contact.addressLabel')}</h4>
+                  <p>{t('contact.addressValue')}</p>
+                </div>
+              </li>
+              <li>
+                <span className="contact-info-icon"><i className="bi bi-telephone-fill"></i></span>
+                <div>
+                  <h4>{t('contact.callLabel')}</h4>
+                  <p>+998 99 315 43 22</p>
+                </div>
+              </li>
+              <li>
+                <span className="contact-info-icon"><i className="bi bi-envelope-fill"></i></span>
+                <div>
+                  <h4>{t('contact.emailLabel')}</h4>
+                  <p>muhammadsodiq4322@gmail.com</p>
+                </div>
+              </li>
+              <li>
+                <span className="contact-info-icon"><i className="bi bi-clock-fill"></i></span>
+                <div>
+                  <h4>{t('contact.hoursLabel')}</h4>
+                  <p>{t('contact.hoursValueDays')}<br />{t('contact.hoursValueTime')}</p>
+                </div>
+              </li>
+              <li>
+                <span className="contact-info-icon"><i className="bi bi-briefcase-fill"></i></span>
+                <div>
+                  <h4>{t('contact.freelanceLabel')}</h4>
+                  <p>{t('contact.freelanceValue')}</p>
+                </div>
+              </li>
+            </ul>
 
-              <div className="contact-socials">
-                <a href="https://t.me/tdmcoder" target="_blank" rel="noopener noreferrer" className="contact-social-btn">
-                  <i className="bi bi-telegram"></i> {t('contact.socialTelegram')}
-                </a>
-                <a href="https://github.com/tdmcoder1337" target="_blank" rel="noopener noreferrer" className="contact-social-btn">
-                  <i className="bi bi-github"></i> {t('contact.socialGithub')}
-                </a>
-                <a href="#" className="contact-social-btn">
-                  <i className="bi bi-linkedin"></i> {t('contact.socialLinkedin')}
-                </a>
-              </div>
+            <div className="contact-socials">
+              <a href="https://t.me/tdmcoder" target="_blank" rel="noopener noreferrer" className="contact-social-btn">
+                <i className="bi bi-telegram"></i> {t('contact.socialTelegram')}
+              </a>
+              <a href="https://github.com/tdmcoder1337" target="_blank" rel="noopener noreferrer" className="contact-social-btn">
+                <i className="bi bi-github"></i> {t('contact.socialGithub')}
+              </a>
+              <a href="#" className="contact-social-btn">
+                <i className="bi bi-linkedin"></i> {t('contact.socialLinkedin')}
+              </a>
             </div>
           </div>
 
@@ -175,10 +175,6 @@ export default function Contact() {
               <p className="contact-form-note"><i className="bi bi-shield-lock"></i> {t('contact.formNote')}</p>
             </form>
           </div>
-        </div>
-
-        <div className="contact-thanks">
-          <i className="bi bi-heart-fill"></i> {t('contact.thanksMsg')} <i className="bi bi-heart-fill"></i>
         </div>
       </div>
     </section>
