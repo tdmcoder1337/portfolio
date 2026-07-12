@@ -18,7 +18,7 @@ export const translations = {
       typedPrefix: 'Men',
       typedWords: ['Web', 'FrontEnd', 'va', 'BackEnd', 'Dasturchiman'],
       quoteLine1: 'Gapirishga kelganda',
-      quoteLine2: 'hamma senior.  Amalda-chi ?',
+      quoteLine2: 'hamma senior. Amalda-chi ?',
       buttonPrimary: 'Loyihalarim',
       buttonSecondary: 'Aloqaga chiqish',
       imgAlt: 'Sodiqov Muhammadsodiq',
@@ -163,6 +163,11 @@ export const translations = {
     },
     language: {
       label: 'Til',
+    },
+    codeCard: {
+      fileName: 'Muhammadsodiq/dev',
+      message1: "Zamonaviy va ishonchli yechimlar yaratiladi,",
+      message2: 'Tanlov doim sizniki.',
     },
   },
   en: {
@@ -329,6 +334,11 @@ export const translations = {
     },
     language: {
       label: 'Language',
+    },
+    codeCard: {
+      fileName: 'botirjon.dev',
+      message1: "If you're a developer, we're friends",
+      message2: 'Nice to meet you',
     },
   },
 };

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Sidebar from './components/Sidebar/Sidebar';
 import Hero from './components/Hero/Hero';
+import CodeCard from './components/CodeCard/CodeCard';
 import About from './components/MenHaqimda/MenHaqimda';
 import Stats from './components/Stats/Stats';
 import Skills from './components/Skills/Skills';
@@ -20,6 +21,7 @@ function Home() {
   return (
     <>
       <Hero />
+      <CodeCard />
       <About />
       <Stats />
       <Skills />
