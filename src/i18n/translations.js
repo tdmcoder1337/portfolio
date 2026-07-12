@@ -166,6 +166,7 @@ export const translations = {
     },
     codeCard: {
       fileName: 'Muhammadsodiq/dev',
+      condition: 'sifatni_tanlasangiz',
       message1: "Zamonaviy va ishonchli yechimlar yaratiladi,",
       message2: 'Tanlov doim sizniki.',
     },
@@ -336,7 +337,8 @@ export const translations = {
       label: 'Language',
     },
     codeCard: {
-      fileName: 'botirjon.dev',
+      fileName: 'Muhammadsodiq/dev',
+      condition: 'if_you_choose_quality',
       message1: "If you're a developer, we're friends",
       message2: 'Nice to meet you',
     },

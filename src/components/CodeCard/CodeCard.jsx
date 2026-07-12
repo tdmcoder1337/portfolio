@@ -28,7 +28,7 @@ export default function CodeCard() {
                 <div className="code-line"><span className="line-number">1</span></div>
                 <div className="code-line">
                   <span className="line-number">2</span>
-                  <span className="tok-keyword">if</span> (<span className="tok-var"></span><span className="tok-punct"></span><span className="tok-prop">sifatni_tanlasangiz</span>) {'{'}
+                  <span className="tok-keyword">if</span> (<span className="tok-prop">{t('codeCard.condition')}</span>) {'{'}
                 </div>
                 <div className="code-line">
                   <span className="line-number">3</span>
