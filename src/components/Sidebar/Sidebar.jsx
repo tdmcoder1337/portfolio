@@ -165,7 +165,7 @@ export default function Sidebar() {
             </ul>
           </nav>
 
-          <a href="/rezyume.html" download className="sidebar-cv-btn">
+          <a href="/rezyume.pdf" download="Sodiqov_Muhammadsodiq_CV.pdf" className="sidebar-cv-btn">
             <i className="bi bi-download"></i>
             {t('sidebar.cvButton')}
           </a>
