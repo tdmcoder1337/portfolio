@@ -124,7 +124,7 @@ export default function Contact() {
             </ul>
 
             <div className="contact-socials">
-              <a href="https://t.me/tdmcoder" target="_blank" rel="noopener noreferrer" className="contact-social-btn">
+              <a href="https://t.me/sodiqov_muhammadsodiq" target="_blank" rel="noopener noreferrer" className="contact-social-btn">
                 <i className="bi bi-telegram"></i> {t('contact.socialTelegram')}
               </a>
               <a href="https://github.com/tdmcoder1337" target="_blank" rel="noopener noreferrer" className="contact-social-btn">
