@@ -23,13 +23,12 @@ export default function Sidebar() {
     { href: '/#about', icon: 'bi-person', label: t('sidebar.nav.about') },
     { href: '/#resume', icon: 'bi-file-earmark-text', label: t('sidebar.nav.resume') },
     { href: '/#portfolio', icon: 'bi-images', label: t('sidebar.nav.portfolio') },
-    { href: '/#services', icon: 'bi-hdd-stack', label: t('sidebar.nav.services') },
     { href: '/#contact', icon: 'bi-envelope', label: t('sidebar.nav.contact') },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'resume', 'portfolio', 'services', 'contact'];
+      const sections = ['hero', 'about', 'resume', 'portfolio', 'contact'];
       const scrollPos = window.scrollY + 200;
       for (const section of sections) {
         const el = document.getElementById(section);

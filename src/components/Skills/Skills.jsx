@@ -19,6 +19,8 @@ const backendSkills = [
   { name: 'MYSQL', value: 90 },
   { name: 'MONGODB', value: 95 },
   { name: 'PUG', value: 90},
+  { name: 'SOCKET.IO', value: 80 },
+  { name: 'REST API DEVELOPMENT', value: 85 }
 ];
 
 const otherSkills = [
