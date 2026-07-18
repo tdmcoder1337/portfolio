@@ -49,3 +49,32 @@
 .skills-category--other {
   margin-top: 40px;
 }
+
+@media (max-width: 768px) {
+  .skill-item {
+    height: auto;
+    min-height: 50px;
+  }
+
+  .skills-category {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .skill-item {
+    margin-bottom: 18px;
+  }
+
+  .skills-category {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-top: 12px;
+    margin-bottom: 18px;
+  }
+
+  .skills-category--back,
+  .skills-category--other {
+    margin-top: 30px;
+  }
+}

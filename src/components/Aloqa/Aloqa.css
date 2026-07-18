@@ -401,6 +401,10 @@
     gap: 0;
   }
 
+  .contact-form-group {
+    margin-bottom: 16px;
+  }
+
   .contact-socials {
     flex-direction: column;
   }

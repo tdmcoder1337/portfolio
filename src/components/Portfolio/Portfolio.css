@@ -155,6 +155,24 @@
   padding: 12px;
 }
 
+@media (max-width: 768px) {
+  .portfolio-card {
+    padding: 24px 24px;
+  }
+
+  .portfolio-card-body h3 {
+    font-size: 16px;
+  }
+
+  .portfolio-card-body p {
+    font-size: 13px;
+  }
+
+  .portfolio-card-content {
+    padding: 24px 24px;
+  }
+}
+
 @media (max-width: 575px) {
   .portfolio-card {
     padding: 22px 20px;

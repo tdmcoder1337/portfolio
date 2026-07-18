@@ -56,3 +56,49 @@
   background: var(--background-color);
   border: 2px solid var(--accent-color);
 }
+
+@media (max-width: 768px) {
+  .resume .resume-title {
+    font-size: 22px;
+  }
+
+  .resume .resume-item h4 {
+    font-size: 16px;
+  }
+
+  .resume .resume-item h5 {
+    font-size: 14px;
+    padding: 4px 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .resume .resume-title {
+    font-size: 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .resume .resume-item {
+    padding: 0 0 16px 16px;
+  }
+
+  .resume .resume-item h4 {
+    font-size: 15px;
+  }
+
+  .resume .resume-item ul {
+    padding-left: 16px;
+  }
+
+  .resume .resume-item ul li {
+    font-size: 14px;
+    padding-bottom: 8px;
+  }
+
+  .resume .resume-item::before {
+    width: 12px;
+    height: 12px;
+    left: -7px;
+  }
+}

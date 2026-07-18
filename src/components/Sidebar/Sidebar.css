@@ -182,12 +182,12 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: color-mix(in srgb, var(--default-color), transparent 94%);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+  background: color-mix(in srgb, var(--heading-color), transparent 92%);
+  border: 1px solid color-mix(in srgb, var(--heading-color), transparent 85%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--nav-color);
+  color: var(--heading-color);
   font-size: 13px;
   transition: all 0.3s ease;
   text-decoration: none;
