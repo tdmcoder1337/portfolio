@@ -34,7 +34,7 @@ export default function PortfolioDetails() {
           <h1>{project.title[lang]}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">{t('portfolioDetails.breadcrumbHome')}</Link></li>
+              <li><button type="button" onClick={() => window.history.back()} className="breadcrumb-back"><i className="bi bi-arrow-left"></i> {lang === 'uz' ? 'Orqaga' : 'Back'}</button></li>
               <li><button type="button" onClick={() => window.history.back()} className="breadcrumb-back">{project.title[lang]}</button></li>
             </ol>
           </nav>
@@ -63,7 +63,7 @@ export default function PortfolioDetails() {
               </div>
               <div className="meta-item">
                 <strong>{t('portfolioDetails.categoryLabel')}</strong>
-                <span>{t('portfolioDetails.categoryValue')}</span>
+                <span>{project.category.toLowerCase() === 'webapp' ? (lang === 'uz' ? 'Web App' : 'Web App') : (lang === 'uz' ? 'Veb sayt' : 'Website')}</span>
               </div>
             </div>
 

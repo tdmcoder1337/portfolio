@@ -1,6 +1,7 @@
 .visual-mebell-page {
   padding: 40px 20px 60px;
   max-width: 1100px;
+  margin: 0 auto;
 }
 
 .vm-page-title {

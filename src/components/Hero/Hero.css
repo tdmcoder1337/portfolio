@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  height: 845px;
+  height: 810px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -276,7 +276,7 @@
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
-  transform: translateY(-20%);
+  transform: translateY(-35%);
 }
 
 .stat-card {

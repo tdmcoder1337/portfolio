@@ -28,23 +28,23 @@ export default function CodeCard() {
                 <div className="code-line"><span className="line-number">1</span></div>
                 <div className="code-line">
                   <span className="line-number">2</span>
-                  <span className="tok-keyword">if</span> (<span className="tok-prop">{t('codeCard.condition')}</span>) {'{'}
+                  <span className="tok-keyword">if</span><span className="tok-punct"> (</span><span className="tok-prop">{t('codeCard.condition')}</span><span className="tok-punct">) {'{'}</span>
                 </div>
                 <div className="code-line">
                   <span className="line-number">3</span>
-                  &nbsp;&nbsp;<span className="tok-func">console</span><span className="tok-punct">.</span><span className="tok-func">log</span>(<span className="tok-string">"🧡 {t('codeCard.message1')}"</span>);
+                  &nbsp;&nbsp;<span className="tok-func">console</span><span className="tok-punct">.</span><span className="tok-func">log</span><span className="tok-punct">(</span><span className="tok-string">"🧡 {t('codeCard.message1')}"</span><span className="tok-punct">);</span>
                 </div>
                 <div className="code-line">
                   <span className="line-number">4</span>
-                  {'}'} <span className="tok-keyword">else</span> {'{'}
+                  <span className="tok-punct">{'}'}</span> <span className="tok-keyword">else</span> <span className="tok-punct">{'{'}</span>
                 </div>
                 <div className="code-line">
                   <span className="line-number">5</span>
-                  &nbsp;&nbsp;<span className="tok-func">console</span><span className="tok-punct">.</span><span className="tok-func">log</span>(<span className="tok-string">"✅ {t('codeCard.message2')}"</span>);
+                  &nbsp;&nbsp;<span className="tok-func">console</span><span className="tok-punct">.</span><span className="tok-func">log</span><span className="tok-punct">(</span><span className="tok-string">"✅ {t('codeCard.message2')}"</span><span className="tok-punct">);</span>
                 </div>
                 <div className="code-line">
                   <span className="line-number">6</span>
-                  {'}'}
+                  <span className="tok-punct">{'}'}</span>
                 </div>
               </code>
             </pre>

@@ -16,10 +16,11 @@ export default function Portfolio() {
       <div className="container">
         <div className="row portfolio-grid">
           {projects.map((item, index) => (
-            <div key={item.id} className="col-lg-6 portfolio-item" data-aos="fade-up" data-aos-delay={index * 100}>
+            <div key={item.id} className={`col-lg-6 portfolio-item portfolio-item-${item.id}`} data-aos="fade-up" data-aos-delay={index * 100}>
               <Link
-                to={item.id === 2 ? '/visual-mebell' : item.id === 3 ? '/rahimov-shokir' : item.id === 4 ? '/tdm-dashboard' : `/portfolio-details?id=${item.id}`}
+                to={`/portfolio-details?id=${item.id}`}
                 className="portfolio-card-link"
+                onClick={() => sessionStorage.setItem('homeScrollY', window.scrollY)}
               >
                 <div className={`portfolio-card ${item.image ? 'portfolio-card--horizontal' : ''}`}>
                   {item.image && (

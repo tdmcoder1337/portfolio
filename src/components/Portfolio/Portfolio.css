@@ -143,6 +143,18 @@
   flex-direction: column;
 }
 
+.portfolio-item-5 .portfolio-card-img,
+.portfolio-item-6 .portfolio-card-img {
+  background: transparent;
+}
+
+.portfolio-item-5 .portfolio-card-img img,
+.portfolio-item-6 .portfolio-card-img img {
+  max-height: 130px;
+  object-fit: contain;
+  padding: 12px;
+}
+
 @media (max-width: 575px) {
   .portfolio-card {
     padding: 22px 20px;

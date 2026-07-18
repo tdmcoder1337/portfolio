@@ -10,6 +10,8 @@ import './index.css';
 
 AOS.init({ duration: 800, once: true, offset: 100 });
 
+history.scrollRestoration = 'manual';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider>

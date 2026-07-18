@@ -1,19 +1,20 @@
 export const projects = [
   {
     id: 1,
-    title: { uz: 'Xarajat Statistika', en: 'Expense Statistics' },
+    title: { uz: 'Jadid mebel', en: 'Jadid furniture' },
     desc: {
-      uz: 'Shaxsiy moliyaviy statistika va xarajatlarni boshqarish platformasi',
-      en: 'A personal financial statistics and expense-management platform',
+      uz: 'Mebel sohasidagi mijozimiz uchun real loyihamiz',
+      en: 'Our real project for our client in the furniture industry',
     },
-    category: 'Website',
-    url: 'https://xarajat-statistika.vercel.app/',
-    image: '/assets/img/portfolio/xarajat.jpg',
+    category: 'website',
+    url: 'https://jadid-mebel.uz',
+    image: '/assets/img/portfolio/jadid-mebel.png',
     purpose: {
-      uz: 'Bu loyiha real project bo\'lib maxsus foydalanuvchi uchun yaratilgan. Tushunarli bo\'lishi uchun eng sodda uslub va minimalizm qo\'llanilgan. Ushbu loyihada siz o\'z xarajatlaringizni kuzatishingiz, turli toifalarga ajratishingiz va moliyaviy holatingizni yaxshilash uchun foydali statistik ma\'lumotlarni olishingiz mumkin. Loyihaga o\'z akkauntingizni kiriting va ma\'lumotlar o\'sha akkauntingizda saqlanadi. Foydalanuvchi ma\'lumotlari xavfsiz saqlanadi.',
-      en: 'This is a real project built for a specific user. A simple, minimalist style was used to keep it easy to understand. In this project you can track your expenses, split them into categories, and get useful statistics to improve your financial situation. Sign in with your own account and your data is stored under that account. User data is stored securely.',
+      uz: 'Jadid-mebel — bu loyiha mijozimiz talablariga binoan qilingan bo\'lib, bunda o\'zingizga yoqqan mebel turini tanlashingiz va uni xarid qilishingiz mumkin. Ichida ko\'plab mahsulotlar joylashtirilgan hamda chiroyli dizaynga ega har bir ekran uchun moslashuvchan platforma hisoblanadi.',
+      en: 'Jadid-mebel is a project created according to the requirements of our client, where you can choose the type of furniture you like and buy it. It is a flexible platform for every screen with a wide range of products and a beautiful design.'
     },
-    tech: 'React, Chart.js, Node.js',
+    tech: 'React, Node js, Tailwind CSS'
+
   },
   {
     id: 2,
@@ -54,7 +55,7 @@ export const projects = [
       uz: 'Boshqaruv paneli va ma\'lumotlar tahlili tizimi',
       en: 'An admin dashboard and data-analytics system',
     },
-    category: 'website',
+    category: 'webapp',
     url: 'https://tdmcoder-dashboard.vercel.app/',
     image: '/assets/img/portfolio/tdm-dashboard-info.jpg',
     purpose: {
@@ -81,19 +82,23 @@ export const projects = [
   },
   {
     id: 6,
-    title: { uz: 'Jadid mebel', en: 'Jadid furniture' },
+    title: { uz: 'Xarajat Statistika', en: 'Expense Statistics' },
     desc: {
-      uz: 'Mebel sohasidagi mijozimiz uchun real loyihamiz',
-      en: 'Our real project for our client in the furniture industry',
+      uz: 'Shaxsiy moliyaviy statistika va xarajatlarni boshqarish platformasi',
+      en: 'A personal financial statistics and expense-management platform',
     },
-    category: 'website',
-    url: 'https://jadid-mebel.uz',
-      image: '/assets/img/portfolio/jadid-mebel.png',
-      purpose: {
-        uz: 'Jadid-mebel — bu loyiha mijozimiz talablariga binoan qilingan bo\'lib, bunda o\'zingizga yoqqan mebel turini tanlashingiz va uni xarid qilishingiz mumkin. Ichida ko\'plab mahsulotlar joylashtirilgan hamda chiroyli dizaynga ega har bir ekran uchun moslashuvchan platforma hisoblanadi.',
-        en: 'Jadid-mebel is a project created according to the requirements of our client, where you can choose the type of furniture you like and buy it. It is a flexible platform for every screen with a wide range of products and a beautiful design.'
-      },
-      tech: 'React, Node js, Tailwind CSS'
-    
-  }
+    category: 'Webapp',
+    url: 'https://xarajat-statistika.vercel.app/',
+    image: '/assets/img/portfolio/xarajat.jpg',
+    purpose: {
+      uz: 'Bu loyiha real project bo\'lib maxsus foydalanuvchi uchun yaratilgan. Tushunarli bo\'lishi uchun eng sodda uslub va minimalizm qo\'llanilgan. Ushbu loyihada siz o\'z xarajatlaringizni kuzatishingiz, turli toifalarga ajratishingiz va moliyaviy holatingizni yaxshilash uchun foydali statistik ma\'lumotlarni olishingiz mumkin. Loyihaga o\'z akkauntingizni kiriting va ma\'lumotlar o\'sha akkauntingizda saqlanadi. Foydalanuvchi ma\'lumotlari xavfsiz saqlanadi.',
+      en: 'This is a real project built for a specific user. A simple, minimalist style was used to keep it easy to understand. In this project you can track your expenses, split them into categories, and get useful statistics to improve your financial situation. Sign in with your own account and your data is stored under that account. User data is stored securely.',
+    },
+    tech: 'React, Chart.js, Node.js',
+  },
+
 ];
+
+
+
+
