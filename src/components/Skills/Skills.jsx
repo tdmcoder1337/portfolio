@@ -76,7 +76,7 @@ export default function Skills() {
   const otherRight = otherSkills.slice(halfOther);
 
   return (
-    <section id="skills" className="skills section light-background">
+    <section id="skills" className="skills section light-background" data-aos="fade-up">
       <div className="container section-title">
         <h2>{t('skills.heading')}</h2>
         <p>{t('skills.intro')}</p>

@@ -6,7 +6,7 @@ export const projects = [
       uz: 'Shaxsiy moliyaviy statistika va xarajatlarni boshqarish platformasi',
       en: 'A personal financial statistics and expense-management platform',
     },
-    category: 'app',
+    category: 'Website',
     url: 'https://xarajat-statistika.vercel.app/',
     image: '/assets/img/portfolio/xarajat.jpg',
     purpose: {
@@ -22,7 +22,7 @@ export const projects = [
       uz: 'Mebel mahsulotlarining vizual katalogi va interaktiv ko\'rinishi',
       en: 'A visual catalog and interactive showcase of furniture products',
     },
-    category: 'app',
+    category: 'Website',
     url: 'https://visual-mebell.vercel.app/',
     image: '/assets/img/portfolio/visual-mebell.jpg',
     purpose: {
@@ -38,14 +38,14 @@ export const projects = [
       uz: 'Shaxsiy portfel sayt va ish tajribasi taqdimoti',
       en: 'A personal portfolio site presenting work experience',
     },
-    category: 'app',
+    category: 'WEbsite',
     url: 'https://rahimov-shokir.netlify.app/',
     image: '/assets/img/portfolio/rahimov-shokir-info.jpg',
     purpose: {
       uz: 'Bu loyihada siz o\'zingizga ma\'qul kelgan musiqalaringizni 1 marta loyihaga kiritib qo\'yasiz va ular aynan shu sahifada sizning telefoningizda saqlanadi. Loyihani 1 marotaba musiqa yuklaganingizdan so\'ng internetsiz ishlatishingiz mumkin. ',
       en: 'In this project, you add your favorite songs to the app once, and they are then stored on your phone right on this page. Once you\'ve uploaded music a single time, you can use the app without an internet connection.',
     },
-    tech: 'React, SCSS, Netlify',
+    tech: 'React, SCSS, Vercel',
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ export const projects = [
       uz: 'Boshqaruv paneli va ma\'lumotlar tahlili tizimi',
       en: 'An admin dashboard and data-analytics system',
     },
-    category: 'app',
+    category: 'website',
     url: 'https://tdmcoder-dashboard.vercel.app/',
     image: '/assets/img/portfolio/tdm-dashboard-info.jpg',
     purpose: {
@@ -70,7 +70,7 @@ export const projects = [
       uz: 'O\'zbekistondagi jang san\'ati sportchilarini birlashtiruvchi platforma',
       en: 'A platform bringing together combat-sport athletes across Uzbekistan',
     },
-    category: 'app',
+    category: 'website',
     url: 'https://tdmcoder-boxing.vercel.app/',
     image: '/assets/img/portfolio/tdm-boxing-info.jpg',
     purpose: {
@@ -79,4 +79,21 @@ export const projects = [
     },
     tech: 'React, Node.js, Tailwind CSS',
   },
+  {
+    id: 6,
+    title: { uz: 'Jadid mebel', en: 'Jadid furniture' },
+    desc: {
+      uz: 'Mebel sohasidagi mijozimiz uchun real loyihamiz',
+      en: 'Our real project for our client in the furniture industry',
+    },
+    category: 'website',
+    url: 'https://jadid-mebel.uz',
+      image: '/assets/img/portfolio/jadid-mebel.png',
+      purpose: {
+        uz: 'Jadid-mebel — bu loyiha mijozimiz talablariga binoan qilingan bo\'lib, bunda o\'zingizga yoqqan mebel turini tanlashingiz va uni xarid qilishingiz mumkin. Ichida ko\'plab mahsulotlar joylashtirilgan hamda chiroyli dizaynga ega har bir ekran uchun moslashuvchan platforma hisoblanadi.',
+        en: 'Jadid-mebel is a project created according to the requirements of our client, where you can choose the type of furniture you like and buy it. It is a flexible platform for every screen with a wide range of products and a beautiful design.'
+      },
+      tech: 'React, Node js, Tailwind CSS'
+    
+  }
 ];

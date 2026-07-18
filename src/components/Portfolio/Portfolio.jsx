@@ -7,7 +7,7 @@ export default function Portfolio() {
   const { t, lang } = useLanguage();
 
   return (
-    <section id="portfolio" className="portfolio section light-background">
+    <section id="portfolio" className="portfolio section light-background" data-aos="fade-up">
       <div className="container section-title">
         <h2>{t('portfolio.heading')}</h2>
         <p>{t('portfolio.intro')}</p>
@@ -15,8 +15,8 @@ export default function Portfolio() {
 
       <div className="container">
         <div className="row portfolio-grid">
-          {projects.map((item) => (
-            <div key={item.id} className="col-lg-6 portfolio-item">
+          {projects.map((item, index) => (
+            <div key={item.id} className="col-lg-6 portfolio-item" data-aos="fade-up" data-aos-delay={index * 100}>
               <Link
                 to={item.id === 2 ? '/visual-mebell' : item.id === 3 ? '/rahimov-shokir' : item.id === 4 ? '/tdm-dashboard' : `/portfolio-details?id=${item.id}`}
                 className="portfolio-card-link"

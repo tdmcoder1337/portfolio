@@ -12,7 +12,7 @@ export default function Resume() {
   const experience = t('resume.experience');
 
   return (
-    <section id="resume" className="resume section">
+    <section id="resume" className="resume section" data-aos="fade-up">
       <div className="container section-title">
         <h2>{t('resume.heading')}</h2>
         <p>{t('resume.intro')}</p>

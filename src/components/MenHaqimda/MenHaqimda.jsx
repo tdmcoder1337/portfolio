@@ -5,7 +5,7 @@ export default function About() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="about section">
+    <section id="about" className="about section" data-aos="fade-up">
       <div className="container section-title">
         <h2>{t('about.heading')}</h2>
         <p>{t('about.intro')}</p>

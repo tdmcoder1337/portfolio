@@ -96,7 +96,7 @@ export default function Sidebar() {
           <div className="sidebar-social">
             <a href="#" className="social-link"><i className="bi bi-instagram"></i></a>
             <a href="https://t.me/tdmcoder" className="social-link"><i className="bi bi-telegram"></i></a>
-            <a href="https://github.com/tdmcoder1337" className="social-link"><i className="bi bi-github"></i></a>
+            <a href="https://github.com/tdmcoder1337" target="_blank" className="social-link"><i className="bi bi-github"></i></a>
           </div>
 
           <div className="sidebar-controls">

@@ -46,7 +46,7 @@ export default function Stats() {
   const items = t('stats.items');
 
   return (
-    <section id="stats" className="stats section">
+    <section id="stats" className="stats section" data-aos="fade-up">
       <div className="container">
         <div className="row">
           {items.map((stat, i) => (

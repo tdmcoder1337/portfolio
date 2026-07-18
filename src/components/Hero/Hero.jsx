@@ -39,7 +39,7 @@ export default function Hero() {
   }, [lang]);
 
   return (
-    <section id="hero" className="hero">
+    <section id="hero" className="hero" data-aos="fade-up">
       <div className="hero-bg">
 
       </div>

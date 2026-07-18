@@ -54,7 +54,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="contact section">
+    <section id="contact" className="contact section" data-aos="fade-up">
       <div className="container">
         <div className="contact-grid">
           <div className="contact-intro">
@@ -65,17 +65,17 @@ export default function Contact() {
             <p className="contact-lead">{t('contact.intro')}</p>
 
             <div className="contact-stats">
-              <div className="contact-stat-card">
+              <div className="contact-stat-card" data-aos="fade-up" data-aos-delay="100">
                 <i className="bi bi-rocket-takeoff"></i>
                 <strong>{t('contact.stat1Number')}</strong>
                 <span>{t('contact.stat1Label')}</span>
               </div>
-              <div className="contact-stat-card">
+              <div className="contact-stat-card" data-aos="fade-up" data-aos-delay="200">
                 <i className="bi bi-clock-history"></i>
                 <strong>{t('contact.stat2Number')}</strong>
                 <span>{t('contact.stat2Label')}</span>
               </div>
-              <div className="contact-stat-card">
+              <div className="contact-stat-card" data-aos="fade-up" data-aos-delay="300">
                 <i className="bi bi-shield-check"></i>
                 <strong>{t('contact.stat3Number')}</strong>
                 <span>{t('contact.stat3Label')}</span>
@@ -97,14 +97,14 @@ export default function Contact() {
                 <span className="contact-info-icon"><i className="bi bi-telephone-fill"></i></span>
                 <div>
                   <h4>{t('contact.callLabel')}</h4>
-                  <p>+998 99 315 43 22</p>
+                  <p><a href="tel:+998993154322" className="contact-info-link">+998 99 315 43 22</a></p>
                 </div>
               </li>
               <li>
                 <span className="contact-info-icon"><i className="bi bi-envelope-fill"></i></span>
                 <div>
                   <h4>{t('contact.emailLabel')}</h4>
-                  <p>muhammadsodiq4322@gmail.com</p>
+                  <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=muhammadsodiq4322@gmail.com" target="_blank" rel="noopener noreferrer" className="contact-info-link">muhammadsodiq4322@gmail.com</a></p>
                 </div>
               </li>
               <li>
